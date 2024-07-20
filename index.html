@@ -14,15 +14,37 @@
   <header class="header">
     <div class="header--container">
       <div class="header__logo">
-        <p>Bis<span>Lite</span></p>
+        <a href="#">
+          <p>Bis<span>Lite</span></p>
+        </a>
       </div>
-      <nav class="nav">
-        <div class="nav--item"><span>Home</span></div>
-        <div class="nav--item"><span>ABOUT US</span></div>
-        <div class="nav--item"><span>SERVICE <i class='bx bxs-chevron-down'></i></span></div>
-        <div class="nav--item"><span>PORTFOLIO <i class='bx bxs-chevron-down'></i></span></div>
-        <div class="nav--item"><span>BLOG</span></div>
-        <div class="nav--item"><span>CONTACT US</span></div>
+      <nav>
+        <ul class="nav">
+          <li class="nav--item"><span>Home</span></li>
+          <li class="nav--item"><span>ABOUT US</span></li>
+          <li class="nav--item dropdown--menu">
+            <span>SERVICE <i class='bx bxs-chevron-down'></i>
+              <ul class="sub__dropdown">
+                <li>Web Design</li>
+                <li>Wordpress Design</li>
+                <li>Mobile App Development</li>
+                <li>Internet Marketing</li>
+                <li>Social Media Management</li>
+              </ul>
+            </span></li>
+          <li class="nav--item dropdown--menu">
+            <span>PORTFOLIO <i class='bx bxs-chevron-down'></i></span>
+            <ul class="sub__dropdown">
+              <li>Web Design</li>
+              <li>Wordpress Design</li>
+              <li>Mobile App Development</li>
+              <li>Internet Marketing</li>
+              <li>Social Media Management</li>
+            </ul>
+          </li>
+          <li class="nav--item"><span>BLOG</span></li>
+          <li class="nav--item"><span>CONTACT US</span></li>
+        </ul>
       </nav>
     </div>
   </header>
@@ -256,7 +278,7 @@
           <p>© Copyright 2021. All rights reserved.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
-        <p class="footer__coppyright_logo">Bis<span>Lite</span></p>
+        <a href="#" class="footer__coppyright_logo">Bis<span>Lite</span></a>
       </div>
     </div>
   </footer>
