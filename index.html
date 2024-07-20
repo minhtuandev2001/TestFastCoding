@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="index.css">
   <title>Document</title>
 </head>
@@ -18,22 +19,12 @@
           <p>Bis<span>Lite</span></p>
         </a>
       </div>
-      <nav>
-        <ul class="nav">
-          <li class="nav--item"><span>Home</span></li>
-          <li class="nav--item"><span>ABOUT US</span></li>
-          <li class="nav--item dropdown--menu">
-            <span>SERVICE <i class='bx bxs-chevron-down'></i>
-              <ul class="sub__dropdown">
-                <li>Web Design</li>
-                <li>Wordpress Design</li>
-                <li>Mobile App Development</li>
-                <li>Internet Marketing</li>
-                <li>Social Media Management</li>
-              </ul>
-            </span></li>
-          <li class="nav--item dropdown--menu">
-            <span>PORTFOLIO <i class='bx bxs-chevron-down'></i></span>
+      <!-- # end logo header -->
+      <ul class="nav" id="nav">
+        <li class="nav--item"><span>Home</span></li>
+        <li class="nav--item"><span>ABOUT US</span></li>
+        <li class="nav--item dropdown--menu">
+          <span>SERVICE <i class='bx bxs-chevron-down'></i>
             <ul class="sub__dropdown">
               <li>Web Design</li>
               <li>Wordpress Design</li>
@@ -41,11 +32,24 @@
               <li>Internet Marketing</li>
               <li>Social Media Management</li>
             </ul>
-          </li>
-          <li class="nav--item"><span>BLOG</span></li>
-          <li class="nav--item"><span>CONTACT US</span></li>
-        </ul>
-      </nav>
+          </span></li>
+        <li class="nav--item dropdown--menu">
+          <span>PORTFOLIO <i class='bx bxs-chevron-down'></i></span>
+          <ul class="sub__dropdown">
+            <li>Web Design</li>
+            <li>Wordpress Design</li>
+            <li>Mobile App Development</li>
+            <li>Internet Marketing</li>
+            <li>Social Media Management</li>
+          </ul>
+        </li>
+        <li class="nav--item"><span>BLOG</span></li>
+        <li class="nav--item"><span>CONTACT US</span></li>
+      </ul>
+      <!-- # end nav Desktop -->
+      <button class="nav__mobile__button" id="nav__mobile__button" data-show="hidden">
+        <i class='bx bx-menu'></i>
+      </button>
     </div>
   </header>
   <!-- # and header -->
@@ -137,6 +141,8 @@
       </div>
     </div>
   </div>
+  <!-- # end posts -->
+  </div>
   <div class="content">
     <div class="content__header">
       <div class="content__title">
@@ -144,37 +150,67 @@
         <h2>LATEST WORKS</h2>
       </div>
       <div class="content__nav">
-        <button class="content_nav--button"><i class='bx bxs-chevron-left'></i></button>
-        <button class="content_nav--button"><i class='bx bxs-chevron-right'></i></button>
+        <button class="content_nav--button swiper-button-next-custom"><i class='bx bxs-chevron-left'></i></button>
+        <button class="content_nav--button swiper-button-prev-custom"><i class='bx bxs-chevron-right'></i></button>
       </div>
     </div>
-    <div class="content__banner">
-      <div class="content__banner--item">
-        <img src="./asset/image/content_img1.png" alt="">
-        <div class="content__banner--item--overlay">
-          <i class='bx bxs-show'></i>
-          <i class='bx bx-link'></i>
+    <div class="content__banner swiper">
+      <div class="swiper-wrapper">
+        <div class="content__banner--item swiper-slide">
+          <img src="./asset/image/content_img1.png" alt="">
+          <div class="content__banner--item--overlay">
+            <i class='bx bxs-show'></i>
+            <i class='bx bx-link'></i>
+          </div>
         </div>
-      </div>
-      <div class="content__banner--item">
-        <img src="./asset/image/content_img1.png" alt="">
-        <div class="content__banner--item--overlay">
-          <i class='bx bxs-show'></i>
-          <i class='bx bx-link'></i>
+        <div class="content__banner--item swiper-slide">
+          <img src="./asset/image/content_img1.png" alt="">
+          <div class="content__banner--item--overlay">
+            <i class='bx bxs-show'></i>
+            <i class='bx bx-link'></i>
+          </div>
         </div>
-      </div>
-      <div class="content__banner--item">
-        <img src="./asset/image/content_img1.png" alt="">
-        <div class="content__banner--item--overlay">
-          <i class='bx bxs-show'></i>
-          <i class='bx bx-link'></i>
+        <div class="content__banner--item swiper-slide">
+          <img src="./asset/image/client_img3.png" alt="">
+          <div class="content__banner--item--overlay">
+            <i class='bx bxs-show'></i>
+            <i class='bx bx-link'></i>
+          </div>
         </div>
-      </div>
-      <div class="content__banner--item">
-        <img src="./asset/image/content_img1.png" alt="">
-        <div class="content__banner--item--overlay">
-          <i class='bx bxs-show'></i>
-          <i class='bx bx-link'></i>
+        <div class="content__banner--item swiper-slide">
+          <img src="./asset/image/content_img1.png" alt="">
+          <div class="content__banner--item--overlay">
+            <i class='bx bxs-show'></i>
+            <i class='bx bx-link'></i>
+          </div>
+        </div>
+        <div class="content__banner--item swiper-slide">
+          <img src="./asset/image/content_img1.png" alt="">
+          <div class="content__banner--item--overlay">
+            <i class='bx bxs-show'></i>
+            <i class='bx bx-link'></i>
+          </div>
+        </div>
+        <div class="content__banner--item swiper-slide">
+          <img src="./asset/image/content_img1.png" alt="">
+          <div class="content__banner--item--overlay">
+            <i class='bx bxs-show'></i>
+            <i class='bx bx-link'></i>
+          </div>
+        </div>
+        <div class="content__banner--item swiper-slide">
+          <img src="./asset/image/content_img1.png" alt="">
+          <div class="content__banner--item--overlay">
+            <i class='bx bxs-show'></i>
+            <i class='bx bx-link'></i>
+          </div>
+        </div>
+        <div class="content__banner--item swiper-slide">
+          <img src="./asset/image/content_img1.png" alt="">
+          <div class="content__banner--item--overlay">
+            <i class='bx bxs-show'></i>
+            <i class='bx bx-link'></i>
+          </div>
         </div>
       </div>
     </div>
@@ -221,6 +257,7 @@
       </div>
     </div>
   </div>
+  <!-- # end content -->
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__content">
@@ -283,5 +320,8 @@
     </div>
   </footer>
 </body>
+<script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./Swiper.js"></script>
 
 </html>

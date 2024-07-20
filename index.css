@@ -39,20 +39,23 @@ html {
 .header {
   width: 100%;
   background: #e8ebf1;
+  z-index: 10;
 }
 .header--container {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   max-width: 1000px;
-  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .header__logo {
-  font-size: 5.5rem;
+  font-size: 5rem;
   font-weight: bold;
+  height: 120px;
+  display: flex;
+  align-items: center;
 }
 .header__logo a {
   text-decoration: none;
@@ -99,6 +102,7 @@ html {
   left: 0;
   margin-top: 1rem;
   display: none;
+  z-index: 999;
 }
 .sub__dropdown li {
   text-transform: capitalize;
@@ -111,6 +115,7 @@ html {
 }
 .sub__dropdown li:last-child {
   border-bottom: 5px solid #2aacc8;
+  padding: 1.2rem 1.5rem;
   margin: 0;
 }
 .nav .dropdown--menu:hover .sub__dropdown {
@@ -142,11 +147,12 @@ html {
   background-color: #e05936;
 }
 .banner__box--content {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #fff;
   font-weight: 500;
   padding: 0rem 5rem;
-  line-height: 1.1;
+  line-height: 1.2;
+  max-width: 400px;
 }
 .banner__box--nav {
   margin-top: 14px;
@@ -272,9 +278,6 @@ html {
   font-size: 1.4rem;
 }
 .content__banner {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4rem;
   padding-bottom: 3.5rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #dfe1e5;
@@ -316,6 +319,7 @@ html {
 .content__partner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3rem;
 }
 .partner--header {
   display: flex;
@@ -344,7 +348,7 @@ html {
 
 .partner__summary {
   display: inline-block;
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 1.4rem;
   font-weight: bold;
   font-style: italic;
@@ -353,7 +357,7 @@ html {
 .client__imgContent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  margin-bottom: 3rem;
 }
 .client__imgContent img {
   width: 100%;
@@ -490,3 +494,248 @@ html {
   color: #2aacc8;
 }
 /* # end footer */
+
+/* # Mobile */
+.nav__mobile__button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  display: none;
+}
+.nav__mobile__button i {
+  font-size: 2.4rem;
+}
+/* # End Mobile */
+
+/* Reponsive Website */
+@media screen and (max-width: 1023.98px) {
+  .header {
+    position: fixed;
+    top: 0;
+  }
+  .nav__mobile__button {
+    display: block;
+  }
+  .header--container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .header__logo {
+    height: auto;
+    font-size: 3.5rem;
+  }
+  .nav {
+    flex-direction: column;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+  }
+  .nav--item {
+    margin: 0rem;
+    display: block;
+    width: 100%;
+  }
+  .nav--item:hover::before {
+    content: "";
+    width: 0.5rem;
+    height: 35px;
+    background-color: #2aacc8;
+    position: absolute;
+    left: 0;
+  }
+  .sub__dropdown {
+    position: static;
+    background-color: inherit;
+    transition: 0.5s;
+  }
+  .sub__dropdown li {
+    border-bottom: none;
+  }
+  .sub__dropdown li:last-child {
+    border: none;
+  }
+  /* # End Reponsive header */
+  .banner {
+    margin-top: 5.5rem;
+  }
+  .banner__box--content {
+    font-size: 3rem;
+  }
+  .banner__box__content {
+    min-height: 0px;
+  }
+  .banner__box__content img {
+    width: 50%;
+  }
+  /* # End Reponsive banner */
+  .posts__container {
+    min-height: 250px;
+    gap: 1.5rem;
+  }
+  .posts__item {
+    padding: 0.5rem;
+  }
+  .posts__item__header {
+    gap: 0.8rem;
+  }
+  /* # End Reponsive posts */
+  .content__banner {
+    gap: 2rem;
+  }
+  .partner__textContent {
+    max-width: 350px;
+  }
+  .content__download {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* # End Reponsive content */
+  .footer {
+    height: 300px;
+    padding: 1rem;
+  }
+  .footer__content {
+    gap: 1.5rem;
+  }
+  /* # End Reponsive footer */
+}
+@media screen and (max-width: 767.98px) {
+  .banner {
+    padding: 1rem 0rem;
+  }
+  .banner__box__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner__box__content img {
+    width: 40%;
+    margin-top: 2rem;
+  }
+  .banner__box--content {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .banner__box--nav {
+    margin-top: 0.8rem;
+  }
+  .box--nav--item {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  /* # End Reponsive banner */
+  .posts__container {
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 430px;
+  }
+  /* # End Reponsive posts */
+  .content__banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .content__download {
+    gap: 2rem;
+  }
+  /* # End Reponsive content */
+  .footer__content--item:nth-child(5) .footer__content--link {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__content--item:nth-child(1) {
+    width: 200px;
+  }
+  .footer__coppyright {
+    margin-top: 1rem;
+  }
+  /* # End Reponsive footer */
+}
+@media screen and (max-width: 671px) {
+  .content__partner {
+    gap: 1rem;
+  }
+  .partner__textContent {
+    max-width: 300px;
+  }
+  .client__imgContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .partner__textContent {
+    -webkit-line-clamp: 10;
+  }
+  .content__download__button button {
+    width: 160px;
+    height: 45px;
+  }
+  .content__download__button button i {
+    font-size: 2rem;
+  }
+  .content__download__button button span {
+    font-size: 1.2rem;
+  }
+  /* # End Reponsive content */
+  .footer {
+    height: 500px;
+  }
+  .footer__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 460px) {
+  .partner__textContent {
+    -webkit-line-clamp: 5;
+  }
+  .footer {
+    height: 670px;
+  }
+  .footer__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer__content--item:nth-child(1) {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 412px) {
+  .content__banner--item {
+    max-width: 100%;
+    max-height: 250px;
+    background-color: green;
+  }
+  .swiper {
+    height: 260px;
+  }
+  .posts__container {
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 430px;
+  }
+  .content__partner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .partner__testimonials {
+    margin-bottom: 1rem;
+  }
+  .partner__textContent {
+    max-width: 100%;
+  }
+  .client__imgContent {
+    margin-bottom: 0;
+  }
+  .content__download {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .content__download__textContent {
+    text-align: center;
+  }
+  .footer__content--item:nth-child(1) {
+    width: 100px;
+  }
+  .footer__coppyright_logo {
+    font-size: 2.5rem;
+  }
+}
+/* End Reponsive Website */
+.swiper-wrapper {
+  display: flex;
+  gap: 4rem;
+}
